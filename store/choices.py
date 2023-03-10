@@ -1,0 +1,9 @@
+PAYMENT_PENDING = "P"
+PAYMENT_COMPLETE = "C"
+PAYMENT_FAILED = "F"
+
+PAYMENT_STATUS = (
+    (PAYMENT_PENDING, "Pending"),
+    (PAYMENT_COMPLETE, "Complete"),
+    (PAYMENT_FAILED, "Failed"),
+)

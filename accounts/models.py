@@ -1,9 +1,10 @@
-from django.contrib.auth.models import AbstractUser
-from django.db import models
-from django.utils.translation import gettext_lazy as _
 from accounts.choices import GENDER_CHOICES
 from accounts.validators import validate_phone_number, validate_full_name
 from common.models import BaseModel
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+from django.utils.translation import gettext_lazy as _
+
 
 from .managers import CustomUserManager
 
