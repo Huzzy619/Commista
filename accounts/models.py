@@ -3,6 +3,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from accounts.choices import GENDER_CHOICES
 from accounts.validators import validate_phone_number, validate_full_name
+from common.models import BaseModel
 
 from .managers import CustomUserManager
 
@@ -32,3 +33,8 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.full_name
+
+
+class Otp(BaseModel):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="otps")
+    code = models.PositiveIntegerField(max_length=6)
